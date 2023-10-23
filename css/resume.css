@@ -171,13 +171,16 @@ h1.name{
 .connect{
     font-size: larger;
     padding-left: 10%;
-    padding-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin: 0;
     /* margin: 15px; */
 }
-
 .main-footer > a{
     /* color: #0a66c2; */
     color: #4b8a82;
+    margin: 0;
+    padding: 0;
 }
 .main-footer > a > i{
     size: 1em;
@@ -186,8 +189,16 @@ h1.name{
     /* text-decoration: none; */
     margin: 5px;
     justify-content: center;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     display: grid;
+    margin-top: 10px;
+}
+.rights{
+  color: rgba(0, 0, 0, 0.756);
+  padding-left: 20px;
+  font-size: small;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 @media screen and (max-width:700px) {
