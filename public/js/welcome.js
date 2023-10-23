@@ -89,7 +89,7 @@ function animate() {
 //     window.location.replace("./index.html");
 // }
 function redirectToAnotherPage() {
-    window.location.href = 'index.html'; // Replace with your desired URL
+    window.location.href = 'main.html'; // Replace with your desired URL
 }
 
 
