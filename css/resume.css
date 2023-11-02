@@ -209,6 +209,7 @@ h1.name{
     }
     .main-menu > ul > li > a {
         padding: 10px;
+        font-size: medium;
     }
     .resume{
         padding-left: 15%;

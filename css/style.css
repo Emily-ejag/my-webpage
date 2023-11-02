@@ -66,6 +66,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 15px;
+    object-fit: fill;
 }
 .big-name{
     font-size: xx-large;
@@ -127,12 +128,19 @@
     }
     .main-menu > ul > li > a {
         padding: 10px;
+        font-size: medium;
     }
     .about{
         padding-top: 5px;
         padding-left: 10%;
         padding-right: 10%;
         text-align: justify;
+    }
+    .main-picture img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: flex;
     }
 }
 
