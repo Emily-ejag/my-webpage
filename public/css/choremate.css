@@ -229,6 +229,9 @@
         text-align: center;
         justify-content: center;
     }
+    .main-menu > ul > li > a {
+        padding: 10px;
+    }
     .about{
         padding-top: 5px;
         padding-left: 10%;
