@@ -207,6 +207,9 @@ h1.name{
         text-align: center;
         justify-content: center;
     }
+    .main-menu > ul > li > a {
+        padding: 10px;
+    }
     .resume{
         padding-left: 15%;
         padding-right: 15%;
