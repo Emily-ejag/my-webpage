@@ -231,6 +231,7 @@
     }
     .main-menu > ul > li > a {
         padding: 10px;
+        font-size: medium;
     }
     .about{
         padding-top: 5px;

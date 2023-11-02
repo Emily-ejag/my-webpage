@@ -377,7 +377,9 @@
     }
     .main-menu > ul > li > a {
       padding: 10px;
-  }
+      font-size: medium;
+      font-size: medium;
+    }
     div.container{
         display: grid;
         text-align: center;
