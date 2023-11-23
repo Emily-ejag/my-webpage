@@ -21,6 +21,7 @@
     margin: 5px;
     color: #4b8a82;
     font-size: larger;
+    cursor: pointer;
 }
 .main-menu{
     display: flex;
@@ -278,14 +279,14 @@
     font-size: 20px;
     /* border-radius: 20%; */
     background-color: #020202af;
-    transform: translateY(300px);
+    transform: translateY(350px);
     transition-delay: 0.3s;
   }
   /* .container .box .content .des{
     font-size: xx-small;
   } */
   .container .box:hover .content h2 {
-    transform: translateY(-100px);
+    transform: translateY(-110px);
   }
   .container .box .content p {
     color: #fff;
@@ -294,11 +295,22 @@
     border-radius: 10%;
     padding: 10px;
     background-color: #020202af;
-    transform: translateY(300px);
+    transform: translateY(350px);
     transition-delay: 0.4s;
   }
+
+  .container .box .content p >span {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .container .box .content p >span:hover {
+    font-size: larger;
+    cursor: pointer;
+  }
+
   .container .box:hover .content p {
-    transform: translateY(-100px);
+    transform: translateY(-110px);
   }
 /* end of cool stuff */
 .chatbot{
