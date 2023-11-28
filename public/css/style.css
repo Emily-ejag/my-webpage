@@ -147,9 +147,9 @@
         text-align: justify;
     }
     .main-picture img{
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
         display: flex;
     }
 }
