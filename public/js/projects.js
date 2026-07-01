@@ -18,7 +18,7 @@ const projectsData = {
           'Assessment SDK & event endpoints architecture',
           'Team mentoring & quality practices'
         ],
-        tech: ['Vue.js', 'TypeScript', 'Firebase', 'Python', 'SQL'],
+        tech: ['Vue.js', 'TypeScript', 'Firebase', 'CSS', 'HTML'],
         links: [
           { text: 'Visit Live', url: 'https://roar.education' },
           { text: 'Design Prototype', url: 'https://www.figma.com/proto/XXFfiMqdrdfaUDaWxyOrLS/ROAR?node-id=1-2&starting-point-node-id=1%3A2' }
@@ -82,36 +82,35 @@ function renderProfessionalProjects() {
 
   projectsData.professional.projects.forEach(project => {
     const imageSection = project.showComparison ? `
-      <div class="roar-comparison">
+      <div class="project-card-comparison">
         <div class="comparison-item">
           <img src="${project.beforeImage}" alt="Before: ${project.name}">
           <p class="comparison-label">Before</p>
         </div>
-        <div class="comparison-arrow">→</div>
         <div class="comparison-item">
           <img src="${project.image}" alt="After: ${project.name}">
           <p class="comparison-label">After</p>
         </div>
       </div>
     ` : `
-      <div class="roar-image">
+      <div class="project-card-image">
         <img src="${project.image}" alt="${project.name}">
       </div>
     `;
 
     const projectHTML = `
-      <div class="roar-section">
+      <div class="project-card">
         ${imageSection}
-        <div class="roar-content">
-          <h2 class="name">${project.name}</h2>
-          <p class="colab">${project.organization} | ${project.date}</p>
-          <p class="text"><strong>${project.description.split('.')[0]}.</strong> ${project.description.substring(project.description.indexOf('.') + 1).trim()}</p>
-          <p class="text" style="margin-top: 1rem;"><strong>Key Work:</strong></p>
-          <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+        <div class="project-card-content">
+          <h2 class="project-title">${project.name}</h2>
+          <p class="project-meta">${project.organization} | ${project.date}</p>
+          <p class="project-description"><strong>${project.description.split('.')[0]}.</strong> ${project.description.substring(project.description.indexOf('.') + 1).trim()}</p>
+          <p class="project-subheader"><strong>Key Work:</strong></p>
+          <ul class="project-list">
             ${project.keyWork.map(work => `<li>${work}</li>`).join('')}
           </ul>
-          <p class="text" style="margin-top: 1rem;"><strong>Tech:</strong> ${project.tech.join(', ')}</p>
-          <div class="roar-links">
+          <p class="project-tech"><strong>Tech:</strong> ${project.tech.join(', ')}</p>
+          <div class="project-links">
             ${project.links.map(link => `<a href="${link.url}" target="_blank">${link.text}</a>`).join('')}
           </div>
         </div>
@@ -121,21 +120,21 @@ function renderProfessionalProjects() {
   });
 }
 
-// Render UI/UX projects (3D card effect)
+// Render UI/UX projects
 function renderUIUXProjects() {
   const container = document.getElementById('uiux-projects');
   if (!container) return;
 
   const cardsHTML = projectsData.uiux.projects.map(project => `
-    <div class="box" onclick="parent.location='${project.link}'">
-      <div class="imgBx">
+    <div class="project-card project-card-clickable" onclick="parent.location='${project.link}'" style="cursor: pointer;">
+      <div class="project-card-image">
         <img src="${project.image}" alt="${project.name}">
+        <div class="project-card-overlay"></div>
       </div>
-      <div class="content">
-        <div>
-          <h2>${project.name}${project.subtitle ? '<br> ' + project.subtitle : ''}</h2>
-          <p>${project.description}<br><br><span>See more</span></p>
-        </div>
+      <div class="project-card-content">
+        <h2 class="project-title">${project.name}${project.subtitle ? '<span class="project-subtitle">' + project.subtitle + '</span>' : ''}</h2>
+        <p class="project-description">${project.description}</p>
+        <p class="project-see-more">See more →</p>
       </div>
     </div>
   `).join('');
@@ -143,28 +142,28 @@ function renderUIUXProjects() {
   container.innerHTML = cardsHTML;
 }
 
-// Render frontend projects (chatbot)
+// Render frontend projects
 function renderFrontendProjects() {
   const container = document.getElementById('frontend-projects');
   if (!container) return;
 
   projectsData.frontend.projects.forEach(project => {
     const detailsHTML = project.details ? project.details.map(detail =>
-      `<p class="text"><strong>${detail.label}: </strong>${detail.text}</p>`
+      `<p class="project-detail"><strong>${detail.label}: </strong>${detail.text}</p>`
     ).join('') : '';
 
     const projectHTML = `
-      <div class="chatbot">
-        <div class="image-container" onclick="parent.location='${project.link}'">
+      <div class="project-card">
+        <div class="project-card-image project-card-interactive" onclick="parent.location='${project.link}'">
           <img src="${project.image}" alt="${project.name}">
-          <div class="overlay"></div>
+          <div class="project-card-overlay"></div>
         </div>
-        <div class="guide">
-          <h2 class="sub-name">${project.name}</h2>
-          <p class="text">${project.description}</p>
-          ${project.details ? '<p class="text">The chatbot was built using React and Chatbot-kit and comprises five key components:</p>' : ''}
+        <div class="project-card-content">
+          <h2 class="project-title">${project.name}</h2>
+          <p class="project-description">${project.description}</p>
+          ${project.details ? '<p class="project-components">Key components:</p>' : ''}
           ${detailsHTML}
-          <a href="${project.link}">Play with my chatbot</a>
+          <a href="${project.link}" class="project-action-link">Play with my chatbot →</a>
         </div>
       </div>
     `;
