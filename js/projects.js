@@ -8,17 +8,18 @@ const projectsData = {
         name: 'ROAR - Rapid Online Assessment of Reading',
         organization: 'Stanford University',
         date: 'November 2023 - Present',
-        description: 'Full-stack assessment platform used by researchers and students across Stanford\'s Reading & Dyslexia Research Program. Led critical features including adaptive testing algorithms (CAT/jsCAT), login flow redesign, Assessment SDK development, and cross-team implementations.',
+        description: 'A scalable web-based literacy assessment platform used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program. As a frontend and assessment engineer, I lead development of user-facing assessment tools, score reports, dashboards, and authentication infrastructure used by hundreds of educators and students.',
         image: 'img/roarLogin.png',
         beforeImage: 'img/beforeRoarLogo.png',
         showComparison: true,
         keyWork: [
-          'Technical implementation of normed scores & adaptive testing standardization',
-          'Login flow redesign: auto-detects SSO from email input with fallback buttons for seamless authentication',
-          'Assessment SDK & event endpoints architecture',
-          'Team mentoring & quality practices'
+          'Led frontend development for school-facing assessment and reporting dashboards',
+          'Redesigned login flow with SSO auto-detection and fallback buttons—reducing authentication friction',
+          'Implemented normed scores and adaptive testing standardization (CAT/jsCAT) across assessment suite',
+          'Built Assessment SDK and event endpoints for extensible research infrastructure',
+          'Mentored team members on frontend quality, accessibility, and maintainable software practices'
         ],
-        tech: ['Vue.js', 'TypeScript', 'Firebase', 'CSS', 'HTML'],
+        tech: ['Vue.js', 'TypeScript', 'Firebase', 'Python', 'SQL', 'HTML5', 'CSS3'],
         links: [
           { text: 'Visit Live', url: 'https://roar.education' },
           { text: 'Design Prototype', url: 'https://www.figma.com/proto/XXFfiMqdrdfaUDaWxyOrLS/ROAR?node-id=1-2&starting-point-node-id=1%3A2' }

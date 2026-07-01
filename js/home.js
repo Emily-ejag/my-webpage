@@ -18,7 +18,7 @@ function renderFeaturedProjects() {
           <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">${roar.organization}</p>
         </div>
         <div class="project-card-body">
-          <p><strong>${roar.organization} | ${roar.date} | 2.5+ years total</strong></p>
+          <p><strong>${roar.organization} | ${roar.date} | 3+ years total</strong></p>
           <p style="margin-top: 1rem;">${roar.description.split('.')[0]}. ${roar.description.substring(roar.description.indexOf('.') + 1).trim()}</p>
           <p><strong>Key Achievements:</strong></p>
           <ul style="margin: 0.5rem 0; padding-left: 1.5rem; color: var(--text-light);">

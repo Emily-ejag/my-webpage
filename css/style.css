@@ -142,7 +142,7 @@ html {
     font-size: 1.5rem;
     color: var(--text-light);
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     animation: fadeInUp 0.8s ease 0.3s backwards;
     font-weight: 600;
 }
@@ -156,11 +156,11 @@ html {
 }
 
 .about {
-    padding: 1rem 0;
+    padding: 0;
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.2rem;
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.7;
     color: var(--text-light);
     animation: fadeInUp 0.8s ease 0.5s backwards;
     font-size: 1.05rem;

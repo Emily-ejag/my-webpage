@@ -39,21 +39,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Contact</title>
+    <script src="js/layout.js"></script>
   </head>
   <body class="my-body">
     <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
-    <div class="main-header" onclick="parent.location='index.html'">
-      <p class="header-name"><strong>Emily</strong> Arteaga-Garcia</p>
-      <section class="main-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </section>
-    </div>
+    <div class="main-header"></div>
     <section class="contact-details" id="responseMessage">
+        <div class="contact-intro">
+            <h1 style="color: var(--primary); font-size: 2rem; margin-bottom: 1rem;">Let's Work Together</h1>
+            <p style="color: var(--text-light); font-size: 1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 2rem;">
+                I'm open to conversations about frontend engineering, UX engineering, educational technology, research software, and tools that support multilingual and diverse communities.
+            </p>
+        </div>
         <div class="contact-form">
             <form id="contactForm" action="https://formspree.io/f/xoqorovq" method="POST" data-formspree-recaptcha="true">
                 <label for="c_name">
@@ -76,10 +73,6 @@
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5qabbKoVOkrb9T9e7j9xcq?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </section>
-    <div class="main-footer">
-      <p class="connect">Let's connect:</p>
-      <a href="https://www.linkedin.com/in/emilyarteagag/" target="_blank"><i class="fa fa-linkedin fa-3x aria-hidden='true' "></i></a>
-      <p class="rights">© 2026 Emily Arteaga Garcia • Built with ❤️ and Code</p>
-    </div>
+    <div class="main-footer"></div>
   </body>
 </html>
