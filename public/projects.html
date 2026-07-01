@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/project.css">
     <title>Projects</title>
+    <script src="js/layout.js"></script>
+    <script src="js/projects.js"></script>
 </head>
 <body class="my-body">
     <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
@@ -33,94 +35,17 @@
       </section>
     </div>
     <div class="project-content">
-      <!-- ROAR Professional Project -->
+      <!-- Professional Projects Container -->
       <div class="project-name">Professional Project</div>
-      <div class="main-desc" style="margin: 45px; margin-top: 0; padding-bottom: 30px; border-bottom: 3px solid #1a7a7a; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;">
-        <div class="video" style="width: 25%; min-width: 200px; display: flex; padding: 20px; justify-content: center; align-items: flex-start;">
-          <img src="img/roarLogin.png" alt="ROAR Login Page" style="width: 100%; max-width: 220px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        </div>
-        <div class="content" style="width: 60%; padding: 20px; padding-left: 30px; display: inline-grid;">
-          <h2 class="name" style="color: #1a7a7a; margin-bottom: 10px;">ROAR - Rapid Online Assessment of Reading</h2>
-          <p class="colab">Stanford University | November 2023 - Present</p>
-          <p class="text"><strong>Full-stack assessment platform</strong> used by researchers and students across Stanford's Reading & Dyslexia Research Program. Led critical features including adaptive testing algorithms (CAT/jsCAT), login flow redesign, Assessment SDK development, and cross-team implementations.</p>
-          <p class="text" style="margin-top: 1rem;"><strong>Key Work:</strong></p>
-          <ul style="margin: 0.5rem 0; padding-left: 1.5rem; color: #4a5568;">
-            <li>Technical implementation of normed scores & adaptive testing standardization</li>
-            <li>Login flow redesign end-to-end with UX research</li>
-            <li>Assessment SDK & event endpoints architecture</li>
-            <li>Team mentoring & quality practices</li>
-          </ul>
-          <p class="text" style="margin-top: 1rem;"><strong>Tech:</strong> Vue.js, TypeScript, Firebase, Python, SQL</p>
-          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-            <a href="https://roar.education" target="_blank" style="background: #1a7a7a; color: white; padding: 0.7rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; text-align: center;">Visit Live</a>
-            <a href="https://www.figma.com/proto/XXFfiMqdrdfaUDaWxyOrLS/ROAR?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" style="background: #1a7a7a; color: white; padding: 0.7rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block; text-align: center;">Design Prototype</a>
-          </div>
-        </div>
-      </div>
+      <div id="professional-projects"></div>
 
-      <div class="UI/UX Design">
-        <div class="project-name">UI/UX Design</div>
-        <p class="options">Hover over the phones to get small description, or click to see more about the project</p>
-          <div class="container">
-            <div class="box" onclick="parent.location='one-armed.html'">
-              <div class="imgBx">
-                <img src="img/OneArmed.png">
-              </div>
-              <div class="content">
-                <div>
-                  <h2>One-Armed Cooking app</h2>
-                  <p>Providing hands-free recipe assistance during cooking and condensing web recipes into more accessible formats. Helps plan grocery shopping/delivery based on a week's meal plan.  Assists users in cooking techniques and adaptations for cooking with one arm. <br><br><span>See more</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="box" onclick="parent.location='choremate.html'">
-              <div class="imgBx">
-                <img src="img/ChoreMate.png">
-              </div>
-              <div class="content">
-                <div>
-                  <h2>ChoreMate <br> Split Chores Easy</h2>
-                  <!-- <p class="des">Split chores with roommates like never before!</p> -->
-                  <p>The user will create the account, add themselves to a household, create new chores, and rank their difficulty. Then, the user will have the app configured and will see their progress during chores compared to their roommates.<br><br><span>See more</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="box" onclick="parent.location='new-scheduler.html'">
-              <div class="imgBx">
-                <img src="img/Scheduler.png">
-              </div>
-              <div class="content">
-                <div>
-                  <h2>New Scheduler for OSU</h2>
-                  <p>Prioritizing user experience (UX) and intuitive UI design, our upgrade ensures a smoother, friendlier scheduling process, simplifying class selection for all users.<br><br><span>See more</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
+      <!-- UI/UX Projects Container -->
+      <div class="project-name">UI/UX Design</div>
+      <p class="options">Hover over the phones to get small description, or click to see more about the project</p>
+      <div class="container" id="uiux-projects"></div>
+      <!-- Frontend Projects Container -->
       <div class="project-name">Front-end</div>
-      <div class="chatbot">        
-        <div class="image-container" onclick="parent.location='chatbot.html'">
-          <img src="img/chatbot.png" alt="Emily's chatbot">
-          <div class="overlay"></div>
-        </div>
-        <div class="guide">
-          <h2 class="sub-name">React Chatbot</h2>
-          <p class="text"> This chatbot was developed as part of an interview challenge, focusing on assisting users in organizing corporate events. <br> I found the coding process quite satisfying, prompting me to share this project with you.</p>
-          <p class="text">The chatbot was built using React and Chatbot-kit and comprises five key components:</p>
-          <p class="text"> <strong>BotAvatar: </strong> This feature allows you to customize the avatar's appearance and name.</p>
-          <p class="text"> <strong>Buttons: </strong> Designed to provide users with convenient suggestions displayed on the left side of the page.</p>
-          <p class="text"> <strong>Date: </strong> A user-friendly calendar interface that simplifies the process of selecting event dates.</p>
-          <p class="text"> <strong>Goals: </strong> This component suggests event goals, offering valuable insights for event planning.</p>
-          <p class="text"> <strong>Plans: </strong>  Similar to Goals, this section includes images of various event plans to facilitate decision-making.</p>
-          <a href="chatbot.html">Play with my chatbot</a>
-        </div>
-      </div>
-      <div>
-      </div>
+      <div id="frontend-projects"></div>
     </div>
     <div class="main-footer">
       <p class="connect">Let's connect:</p>
