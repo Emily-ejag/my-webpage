@@ -127,8 +127,55 @@ html {
     padding-left: 20px;
     margin-top: 5px;
     margin-bottom: 15px;
-    color: gray;
-    
+    color: var(--text-light);
+}
+
+/* Standardized Job Experience Styling */
+.job-title {
+    padding-left: 20px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.job-org {
+    padding-left: 20px;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.job-location {
+    color: var(--text-light);
+}
+
+.job-meta {
+    padding-left: 20px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.job-bullets {
+    padding-left: 40px;
+    color: var(--text-light);
+    margin: 0.8rem 0 1rem 0;
+    line-height: 1.6;
+}
+
+.job-bullets li {
+    margin-bottom: 0.5rem;
+}
+
+.job-tech {
+    padding-left: 20px;
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 

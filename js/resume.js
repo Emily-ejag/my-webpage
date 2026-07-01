@@ -10,29 +10,21 @@ const resumeData = {
 
   experience: [
     {
-      title: 'SOFTWARE ENGINEER - ASSESSMENT & FRONTEND ENGINEERING',
-      organization: 'Stanford University',
+      title: 'SOFTWARE ENGINEER - FRONTEND & ASSESSMENT ENGINEERING',
+      organization: 'Stanford University - ROAR',
       location: 'Stanford, California, United States',
-      date: 'May 2024 - Present',
-      duration: 'Full-time (2 yrs 3 mos)',
+      date: 'Nov 2023 - Present',
+      duration: 'Full-time (3 years)',
       bullets: [
+        'Redesigned and implemented the login flow end-to-end after identifying user-facing errors, conducting user research, proposing improvements, and shipping a major dashboard UX enhancement.',
         'Helped drive CATification across ROAR\'s assessment suite, including jsCAT/Clowder enhancements, adaptive assessment standardization, and integrations across multiple assessments.',
         'Led technical implementation for normed score updates across the assessment suite, including standardization and cross-team coordination.',
-        'Redesigned and implemented the login flow end-to-end after identifying user-facing errors, conducting user research, proposing improvements, and shipping a major dashboard UX enhancement.',
         'Led development of the Assessment SDK and run event endpoints as part of a broader backend refactor, helping establish new architectural foundations for future assessment integrations.',
         'Translate ambiguous research, product, and psychometric requirements into clear technical implementation plans for engineers and researchers.',
         'Collaborate closely with researchers, engineers, and research partners to surface blockers early, align requirements, and improve platform reliability.',
         'Mentor and support collaborators across assessment implementation, frontend quality, adaptive testing, and maintainable software practices.'
-      ]
-    },
-    {
-      title: 'FULL STACK DEVELOPER',
-      organization: 'Stanford University - ROAR',
-      location: 'Stanford, California (Hybrid)',
-      date: 'Nov 2023 - May 2024',
-      duration: '7 months',
-      description: 'Part of the Dev team at ROAR (Rapid Online Assessment of Reading), an open-access assessment platform grounded in ongoing research by the Stanford Reading & Dyslexia Research Program.',
-      tech: 'Web Development, Vue.js, JavaScript, TypeScript, Firebase'
+      ],
+      tech: 'Vue.js, TypeScript, Firebase, Python, SQL'
     },
     {
       title: 'SOFTWARE ENGINEER',
@@ -40,7 +32,9 @@ const resumeData = {
       location: 'Albany, OR',
       date: 'Dec 2020 - Feb 2023',
       duration: '2 yrs 3 months',
-      description: 'Developed a health education app that has helped more than 500 people in Nepal and Guatemala.',
+      bullets: [
+        'Developed a health education app that has helped more than 500 people in Nepal and Guatemala.'
+      ],
       tech: 'Figma, Dart, Mobile Development'
     },
     {
@@ -49,7 +43,11 @@ const resumeData = {
       location: 'Corvallis, OR',
       date: 'Sep 2021 - Jun 2023',
       duration: '1 yr 10 mos (Part-time)',
-      description: 'Led ML chatbot project, addressing dev and user challenges. Assisted real-time diversity dashboard. Aided sensemaking in computational notebooks and designing solutions.',
+      bullets: [
+        'Led ML chatbot project, addressing developer and user challenges through iterative research and implementation.',
+        'Assisted in real-time diversity dashboard development for tracking open-source software communities.',
+        'Aided sensemaking research in computational notebooks and designed solutions for data analysis workflows.'
+      ],
       tech: 'Web Development, Figma, Python, HTML5, CSS, JavaScript'
     },
     {
@@ -59,13 +57,13 @@ const resumeData = {
       date: 'Nov 2019 - Dec 2020',
       duration: '1 yr 2 months (Part-time)',
       bullets: [
-        'Elaboration of a set of games called "Album of Memories" for older adults to train attention and memory functions in collaboration with psychologist experts.',
-        'Used Visual Studio Tool with the Ionic and AngularJS framework.',
+        'Elaborated a set of games called "Album of Memories" for older adults to train attention and memory functions in collaboration with psychologist experts.',
+        'Used Visual Studio Tool with the Ionic and AngularJS framework for cross-platform development.',
         'Deployed a Puzzle Game on the web to perform the initial experimental phase of the research.',
         'Completed systematic reviews on serious games for elderly support.',
         'Created social media web pages for the GIIT Research Group.'
       ],
-      tech: 'Web Development, Typescript, AngularJS, Ionic, CSS3, HTML5, Java'
+      tech: 'Web Development, TypeScript, AngularJS, Ionic, CSS3, HTML5, Java'
     },
     {
       title: 'SOFTWARE ENGINEER INTERN',
@@ -73,7 +71,9 @@ const resumeData = {
       location: 'Cuenca, Ecuador',
       date: 'Jul 2019 - Sep 2019',
       duration: '3 months (Full-time)',
-      description: 'TIC department Assistant with client support responsibilities.',
+      bullets: [
+        'Provided TIC department assistance with client support responsibilities and system maintenance.'
+      ],
       tech: 'Java'
     },
     {
@@ -82,8 +82,11 @@ const resumeData = {
       location: 'Cuenca, Ecuador',
       date: 'Jul 2018 - Sep 2018',
       duration: '3 months (Full-time)',
-      description: 'Project: Software to measure the level of Santa Barbara River. Developed software in Visual Basic using HEC-RAS and extracted data to calculate Manning coefficient for river flow roughness analysis.',
-      tech: ''
+      bullets: [
+        'Developed software to measure the level of Santa Barbara River using HEC-RAS modeling.',
+        'Extracted hydrological data and calculated Manning coefficient for river flow roughness analysis.'
+      ],
+      tech: 'Visual Basic, HEC-RAS'
     }
   ]
 };
@@ -109,19 +112,19 @@ function renderExperience() {
 
   resumeData.experience.forEach(job => {
     html += `
-      <p class="enfasis"><strong>${job.title}</strong></p>
-      <p class="where">${job.organization}    &emsp;&ensp;&ensp;  ${job.location}</p>
-      <p class="sub"><strong>${job.date}</strong> · ${job.duration}</p>
+      <p class="job-title"><strong>${job.title}</strong></p>
+      <p class="job-org">${job.organization} <span class="job-location">·</span> ${job.location}</p>
+      <p class="job-meta"><strong>${job.date}</strong> · ${job.duration}</p>
     `;
 
     if (job.bullets) {
-      html += `<ul style="padding-left: 40px; color: #4a5568; margin: 10px 0;">
+      html += `<ul class="job-bullets">
         ${job.bullets.map(bullet => `<li>${bullet}</li>`).join('')}
       </ul>`;
     }
 
-    if (job.description) {
-      html += `<p class="sub">${job.description}${job.tech ? ' <br> ' + job.tech : ''}</p>`;
+    if (job.tech) {
+      html += `<p class="job-tech"><strong>Tech:</strong> ${job.tech}</p>`;
     }
   });
 
