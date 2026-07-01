@@ -11,20 +11,20 @@ const resumeData = {
   experience: [
     {
       title: 'SOFTWARE ENGINEER - FRONTEND & ASSESSMENT ENGINEERING',
-      organization: 'Stanford University - ROAR',
+      organization: 'Stanford University - ROAR Literacy Assessment',
       location: 'Stanford, California, United States',
       date: 'Nov 2023 - Present',
       duration: 'Full-time (3 years)',
       bullets: [
-        'Redesigned and implemented the login flow end-to-end after identifying user-facing errors, conducting user research, proposing improvements, and shipping a major dashboard UX enhancement.',
-        'Helped drive CATification across ROAR\'s assessment suite, including jsCAT/Clowder enhancements, adaptive assessment standardization, and integrations across multiple assessments.',
-        'Led technical implementation for normed score updates across the assessment suite, including standardization and cross-team coordination.',
-        'Led development of the Assessment SDK and run event endpoints as part of a broader backend refactor, helping establish new architectural foundations for future assessment integrations.',
-        'Translate ambiguous research, product, and psychometric requirements into clear technical implementation plans for engineers and researchers.',
-        'Collaborate closely with researchers, engineers, and research partners to surface blockers early, align requirements, and improve platform reliability.',
-        'Mentor and support collaborators across assessment implementation, frontend quality, adaptive testing, and maintainable software practices.'
+        'Lead frontend and assessment app development for research-based literacy tools used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program.',
+        'Built and maintained Vue/TypeScript applications for scalable web-based literacy assessments, score reports, and school-facing dashboards serving hundreds of educators and students.',
+        'Redesigned and implemented the login flow end-to-end, conducting user research and shipping a major UX enhancement with SSO auto-detection and fallback authentication.',
+        'Led technical implementation of normed scores and adaptive assessment standardization (CAT/jsCAT), coordinating across research, engineering, and psychometric teams.',
+        'Developed Assessment SDK and event endpoints, establishing architectural foundations for future assessment integrations and research infrastructure.',
+        'Translated ambiguous research and psychometric requirements into clear technical implementation plans for engineers and researchers.',
+        'Mentored collaborators across assessment implementation, frontend quality, adaptive testing, and maintainable software practices.'
       ],
-      tech: 'Vue.js, TypeScript, Firebase, Python, SQL'
+      tech: 'Vue.js, TypeScript, Firebase, Python, SQL, HTML5, CSS'
     },
     {
       title: 'SOFTWARE ENGINEER',
@@ -98,7 +98,7 @@ function renderSkills() {
 
   let html = '<h2 class="context">SKILLS</h2>';
   for (const [category, skills] of Object.entries(resumeData.skills)) {
-    html += `<p class="enfasis2"><strong>${category}</strong>${skills}</p>`;
+    html += `<p class="enfasis2"><strong>${category}</strong> — ${skills}</p>`;
   }
   container.innerHTML = html;
 }
