@@ -1,107 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6DH9L0PWM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-J6DH9L0PWM');
     </script>
     <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="New Scheduler for OSU UX case study by Emily Arteaga-Garcia, redesigning course search into a clearer scheduling workflow.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/new-scheduler.css">
+    <link rel="stylesheet" href="css/case-study.css">
     <script src="js/layout.js"></script>
-    <title>Emily Arteaga</title>
+    <title>New Scheduler for OSU | Emily Arteaga-Garcia</title>
   </head>
   <body class="my-body">
-    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
     <div class="main-header"></div>
-    <div class="chore">
-        <div class="main-desc">
-            <div class="video">
-                <img class="git" src="img/new-scheduler.png" alt="New Scheduler Screen">
+    <main class="case-page">
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <a class="back-link" href="projects.html">Back to projects</a>
+          <p class="case-eyebrow">UX Case Study / Scheduling Workflow</p>
+          <h1 class="case-title">New Scheduler for OSU</h1>
+          <p class="case-summary">A course-search redesign for graduate students who need to evaluate classes while seeing how their weekly schedule will take shape.</p>
+          <div class="case-meta-grid" aria-label="Project details">
+            <div>
+              <span>Role</span>
+              <strong>UX redesign, low-fidelity concepts, high-fidelity prototype</strong>
             </div>
-            <div class="content">
-                <h1 class="name">New Scheduler <span> - OSU</span></h1> 
-                <p class="text">Suppose you are asked to redesign the OSU course search page for graduate students who need to decide which courses to take in the next term. You've done interviews and learned that they want to see how their weekly schedule would look like while searching for courses.</p>
-                <p class="text">From the previous scheduler from OSU, make changes in the design using design guidelines to make it more friendly</p>
+            <div>
+              <span>Audience</span>
+              <strong>Graduate students selecting courses for the next term</strong>
             </div>
+            <div>
+              <span>Focus</span>
+              <strong>Course search, preview, conflict visibility, schedule building</strong>
+            </div>
+          </div>
         </div>
-        <h2 class="big-text">Low-Fidelity <br> <span>What to improve?</span></h2>
-        <div class="main-desc">
-            <div class="cool-container">
-              <vid class="video">
-                <img src="img/search.png" alt="Search for classes design" class="git2">
-              </vid>
-              <h3>Search for classes</h3>
-            </div>
-            <div class="cool-container">
-              <vid class="video">
-                <img src="img/hover.png" alt="Hover to see in calendar design" class="git2">
-              </vid>
-              <h3>Hover to see in calendar</h3>
-            </div>
-            <div class="cool-container">
-              <vid class="video">
-                <img src="img/add.png" alt="Click to add to calendar design" class="git2">
-              </vid>
-              <h3>Click to add to calendar</h3>
-            </div>
-            <div class="cool-container">
-                <vid class="video">
-                  <img src="img/remove.png" alt="See conflicts and remove classes design" class="git2">
-                </vid>
-                <h3>See conflicts and remove classes</h3>
-            </div>
-        </div>
-        <h2 class="big-text">High-Fidelity</h2>
-        <div class="main-desc">
-            <div class="cool-container2">
-              <vid class="video">
-                <img src="img/consistency.png" alt="Consistency principal" class="git3">
-              </vid>
-              <p class="text"> <strong>Consistency</strong> applied by filtering elements are aligned and have the same color and format. </p>
-              <p class="text">Grouped classes based on department and give <strong>feedback</strong>  by adding their full name.</p>
-            </div>
-            <div class="cool-container2">
-              <vid class="video">
-                <img src="img/visibility.png" alt="Visibility principle" class="git2">
-              </vid>
-              <p class="text">Deleting "X" from the paper prototype when a class is selected. The color code is <strong>intuitive</strong>  enough.</p>
-              <p class="text"> <strong>Visibility</strong> of system status by saying how to interact and select classes.</p>
-            </div>
-        </div>
-        <div class="main-desc">
-            <div class="cool-container3">
-              <vid class="video">
-                <img src="img/prevention.png" alt="Prevention principal" class="git2">
-              </vid>
-              <p class="text"> <strong>Recover and prevention</strong> when adding more classes. </p>
-            </div>
-            <div class="cool-container3">
-              <vid class="video">
-                <img src="img/recognition.png" alt="Recognition principle" class="git2">
-              </vid>
-              <p class="text"> <strong>Recognition</strong> by keeping the elements in the same screen and adding arrows for flow.</p>
-            </div>
-        </div>
-        <h2 class="big-text">Figma Links </h2>
-        <div class="main-desc">
-            <div class="content">
-                <p class="text">New Scheduler: <a href="https://www.figma.com/file/Db626abIEgo8wMcCwveHqI/OSU-Schedule?type=design&node-id=0%3A1&mode=design&t=hA9bTH198ePi3F7m-1" target="_blank"> NewScheduler</a></p>
-            </div>
-        </div>
-        
-    </div>
+        <figure class="case-hero-media">
+          <img src="img/new-scheduler.png" alt="New Scheduler high-fidelity screen">
+          <figcaption>Course search and weekly schedule prototype</figcaption>
+        </figure>
+      </section>
 
-    <div class="main-footer"></div>    
+      <section class="case-section">
+        <p class="section-kicker">Design Goal</p>
+        <h2>Move course selection from a table lookup into a guided scheduling flow.</h2>
+        <p>The previous scheduler made students search courses separately from understanding how those choices fit their weekly schedule. The redesign brings filtering, previewing, adding, and conflict handling into a clearer flow.</p>
+      </section>
+
+      <section class="case-section">
+        <p class="section-kicker">Low-Fidelity Direction</p>
+        <h2>The first concepts focused on search, preview, add, and remove states.</h2>
+        <div class="case-grid case-grid-four">
+          <article class="case-card">
+            <img src="img/search.png" alt="Low-fidelity search concept">
+            <div class="case-card-content">
+              <h3>Search for classes</h3>
+              <p>Filters support faster narrowing by term, department, course, and instructor.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <img src="img/hover.png" alt="Low-fidelity hover preview concept">
+            <div class="case-card-content">
+              <h3>Preview in calendar</h3>
+              <p>Students can inspect how a class affects their week before committing.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <img src="img/add.png" alt="Low-fidelity add-to-calendar concept">
+            <div class="case-card-content">
+              <h3>Add to schedule</h3>
+              <p>Selected classes move into the weekly view so the schedule becomes tangible.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <img src="img/remove.png" alt="Low-fidelity conflict and removal concept">
+            <div class="case-card-content">
+              <h3>Resolve conflicts</h3>
+              <p>Conflict states and removal actions help students recover without losing context.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="section-kicker">High-Fidelity Principles</p>
+        <h2>Design guidelines turned the prototype into a clearer interface.</h2>
+        <div class="case-grid">
+          <article class="case-card">
+            <img src="img/consistency.png" alt="Consistency principle applied to scheduler filters">
+            <div class="case-card-content">
+              <h3>Consistency</h3>
+              <p>Filter controls are aligned and formatted consistently, and classes are grouped by department for easier scanning.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <img src="img/visibility.png" alt="Visibility principle applied to scheduler state">
+            <div class="case-card-content">
+              <h3>Visibility</h3>
+              <p>The interface explains how to interact with classes and makes selected states easier to recognize.</p>
+            </div>
+          </article>
+          <article class="case-card">
+            <img src="img/prevention.png" alt="Error prevention principle in scheduler">
+            <div class="case-card-content">
+              <h3>Prevention and recovery</h3>
+              <p>Students can add, see conflicts, and remove classes without breaking the flow.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section case-row">
+        <div>
+          <p class="section-kicker">Outcome</p>
+          <h2>A smoother class-selection workflow with less mental juggling.</h2>
+          <p>The redesign keeps search and schedule context visible together, helping students compare options, preview weekly impact, and build confidence before finalizing selections.</p>
+          <div class="case-actions">
+            <a href="https://www.figma.com/file/Db626abIEgo8wMcCwveHqI/OSU-Schedule?type=design&node-id=0%3A1&mode=design&t=hA9bTH198ePi3F7m-1" target="_blank" rel="noopener noreferrer">View Figma Prototype</a>
+          </div>
+        </div>
+        <figure class="case-media">
+          <img src="img/Scheduler.png" alt="Scheduler project preview">
+          <figcaption>Final scheduling concept</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <div class="main-footer"></div>
   </body>
 </html>

@@ -10,19 +10,21 @@ const resumeData = {
 
   experience: [
     {
-      title: 'SOFTWARE ENGINEER - FRONTEND & ASSESSMENT ENGINEERING',
+      title: 'SOFTWARE ENGINEER - ASSESSMENT & FRONTEND ENGINEERING LEAD',
       organization: 'Stanford University - ROAR Literacy Assessment',
       location: 'Stanford, California, United States',
       date: 'Nov 2023 - Present',
       duration: 'Full-time (3 years)',
       bullets: [
-        'Lead frontend and assessment app development for research-based literacy tools used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program.',
-        'Built and maintained Vue/TypeScript applications for scalable web-based literacy assessments, score reports, and school-facing dashboards serving hundreds of educators and students.',
-        'Redesigned and implemented the login flow end-to-end, conducting user research and shipping a major UX enhancement with SSO auto-detection and fallback authentication.',
+        'Lead frontend strategy and implementation for research-based literacy tools used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program.',
+        'Partner with stakeholders to shape product decisions, propose interaction flows, create mockups, implement the frontend, and deliver polished production experiences.',
+        'Built and maintained Vue/TypeScript applications for scalable web-based literacy assessments, score reports, support flows, and school-facing dashboards serving hundreds of educators and students.',
+        'Redesigned and implemented the Submit a Request support form from prototype to live Zendesk experience, improving the path for schools and users seeking technical help.',
+        'Redesigned and implemented the login flow end-to-end, shipping a major UX enhancement with SSO auto-detection and fallback authentication.',
         'Led technical implementation of normed scores and adaptive assessment standardization (CAT/jsCAT), coordinating across research, engineering, and psychometric teams.',
         'Developed Assessment SDK and event endpoints, establishing architectural foundations for future assessment integrations and research infrastructure.',
-        'Translated ambiguous research and psychometric requirements into clear technical implementation plans for engineers and researchers.',
-        'Mentored collaborators across assessment implementation, frontend quality, adaptive testing, and maintainable software practices.'
+        'Translate ambiguous product, research, and psychometric requirements into clear frontend implementation plans for engineers and researchers.',
+        'Mentor collaborators across frontend quality, accessibility, adaptive testing, and maintainable software practices.'
       ],
       tech: 'Vue.js, TypeScript, Firebase, Python, SQL, HTML5, CSS'
     },
