@@ -1,13 +1,17 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slides li');
-slides[currentSlide].style.display = 'block'; // Display the first image initially
+if (slides.length) {
+    slides[currentSlide].style.display = 'block';
+}
 
 function nextSlide() {
+    if (!slides.length) return;
     slides[currentSlide].style.display = 'none';
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].style.display = 'block';
-    setTimeout(nextSlide, 3000); // Change images every 3 seconds
+    setTimeout(nextSlide, 3000);
 }
 
-// Start the image rotation
-nextSlide();
+if (slides.length > 1) {
+    setTimeout(nextSlide, 3000);
+}

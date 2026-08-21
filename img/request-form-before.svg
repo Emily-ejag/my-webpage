@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1200" viewBox="0 0 1440 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Previous ROAR Submit a Request form layout</title>
+  <desc id="desc">A dense single-column support form with many fields and limited grouping, used as the before state for the redesign.</desc>
+  <rect width="1440" height="1200" fill="#f3eee6"/>
+  <rect width="1440" height="54" fill="#e7eee0"/>
+  <rect x="8" y="8" width="38" height="38" rx="19" fill="#f8fbf5"/>
+  <circle cx="23" cy="22" r="3" fill="#2f352f"/>
+  <circle cx="31" cy="30" r="3" fill="#2f352f"/>
+  <path d="M19 30h7M27 22h10M18 37h18" stroke="#2f352f" stroke-width="2" stroke-linecap="round"/>
+  <text x="55" y="36" fill="#232823" font-family="Inter, Arial, sans-serif" font-size="18">roareducation.zendesk.com/hc/en-us/requests/new</text>
+
+  <rect x="0" y="54" width="1440" height="70" fill="#f6f1e9"/>
+  <g transform="translate(392 70)">
+    <rect x="0" y="0" width="30" height="30" rx="3" fill="#9d1b17"/>
+    <path d="M8 17h20M8 20h22" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="42" y="23" fill="#8b241f" font-family="Inter, Arial, sans-serif" font-size="18">ROAR - Help Center</text>
+  </g>
+  <text x="1242" y="91" fill="#1f66b8" font-family="Inter, Arial, sans-serif" font-size="16">Submit a request</text>
+  <line x1="0" y1="124" x2="1440" y2="124" stroke="#d7d0c7"/>
+
+  <text x="392" y="176" fill="#1f66b8" font-family="Inter, Arial, sans-serif" font-size="15">ROAR - Help Center &gt; Submit a request</text>
+  <rect x="1096" y="151" width="246" height="43" rx="21" fill="#fffdf8" stroke="#8c969f"/>
+  <circle cx="1115" cy="173" r="8" fill="none" stroke="#687076" stroke-width="2"/>
+  <path d="M1121 179l8 8" stroke="#687076" stroke-width="2" stroke-linecap="round"/>
+  <text x="1137" y="180" fill="#717171" font-family="Inter, Arial, sans-serif" font-size="16">Search</text>
+
+  <g transform="translate(392 258)">
+    <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Submit a request</text>
+    <text x="0" y="55" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="18">Fields marked with an asterisk (*) are required.</text>
+
+    <g transform="translate(0 105)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Please choose your issue below</text>
+      <rect x="0" y="17" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+      <text x="16" y="45" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="16">Report a Technical Issue</text>
+      <path d="M512 34l6 5 6-5" fill="none" stroke="#5f6972" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(0 190)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Your email address*</text>
+      <rect x="0" y="18" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+    </g>
+
+    <g transform="translate(0 275)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Name*</text>
+      <text x="0" y="26" fill="#5d6872" font-family="Inter, Arial, sans-serif" font-size="16">Please enter your full name</text>
+      <rect x="0" y="42" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+    </g>
+
+    <g transform="translate(0 380)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Re-enter your email address*</text>
+      <text x="0" y="26" fill="#5d6872" font-family="Inter, Arial, sans-serif" font-size="16">Please provide your school/organization email.</text>
+      <rect x="0" y="42" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+    </g>
+
+    <g transform="translate(0 485)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">What is the name of your school and district?*</text>
+      <text x="0" y="26" fill="#5d6872" font-family="Inter, Arial, sans-serif" font-size="16">If you are not associated with a particular school, please enter your district name.</text>
+      <rect x="0" y="42" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+    </g>
+
+    <g transform="translate(0 590)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Login method*</text>
+      <text x="0" y="26" fill="#5d6872" font-family="Inter, Arial, sans-serif" font-size="16">Select one</text>
+      <rect x="0" y="42" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+      <text x="16" y="70" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="16">-</text>
+      <path d="M512 59l6 5 6-5" fill="none" stroke="#5f6972" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(0 700)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Please provide your school's DBN*</text>
+      <rect x="0" y="18" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+    </g>
+
+    <g transform="translate(0 785)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Which page did you first encounter this issue?</text>
+      <rect x="0" y="18" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+      <text x="16" y="46" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="16">-</text>
+      <path d="M512 35l6 5 6-5" fill="none" stroke="#5f6972" stroke-width="2"/>
+    </g>
+
+    <g transform="translate(0 870)">
+      <text x="0" y="0" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Which device were you using?</text>
+      <rect x="0" y="18" width="536" height="43" rx="3" fill="#faf6ef" stroke="#7d8790"/>
+      <text x="16" y="46" fill="#303942" font-family="Inter, Arial, sans-serif" font-size="16">-</text>
+      <path d="M512 35l6 5 6-5" fill="none" stroke="#5f6972" stroke-width="2"/>
+    </g>
+  </g>
+
+  <rect x="1325" y="510" width="5" height="205" rx="2.5" fill="#bdb8b1"/>
+</svg>

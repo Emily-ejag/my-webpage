@@ -1,28 +1,56 @@
 // Project data structure
 const projectsData = {
   professional: {
-    title: 'Professional Project',
+    title: 'Professional Frontend Work',
     projects: [
       {
         id: 'roar',
         name: 'ROAR - Rapid Online Assessment of Reading',
         organization: 'Stanford University',
         date: 'November 2023 - Present',
-        description: 'A scalable web-based literacy assessment platform used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program. As a frontend and assessment engineer, I lead development of user-facing assessment tools, score reports, dashboards, and authentication infrastructure used by hundreds of educators and students.',
+        description: 'A scalable web-based literacy assessment platform used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program. As a frontend and assessment engineering lead, I shape user-facing product decisions, mock interaction flows, implement frontend systems, and deliver polished tools used by educators, students, and researchers.',
         image: 'img/roarLogin.png',
         beforeImage: 'img/beforeRoarLogo.png',
         showComparison: true,
         keyWork: [
-          'Led frontend development for school-facing assessment and reporting dashboards',
+          'Lead frontend development for school-facing assessment, reporting, support, and dashboard experiences',
           'Redesigned login flow with SSO auto-detection and fallback buttons—reducing authentication friction',
           'Implemented normed scores and adaptive testing standardization (CAT/jsCAT) across assessment suite',
           'Built Assessment SDK and event endpoints for extensible research infrastructure',
-          'Mentored team members on frontend quality, accessibility, and maintainable software practices'
+          'Mentor team members on frontend quality, accessibility, and maintainable software practices'
         ],
         tech: ['Vue.js', 'TypeScript', 'Firebase', 'Python', 'SQL', 'HTML5', 'CSS3'],
         links: [
           { text: 'Visit Live', url: 'https://roar.education' },
           { text: 'Design Prototype', url: 'https://www.figma.com/proto/XXFfiMqdrdfaUDaWxyOrLS/ROAR?node-id=1-2&starting-point-node-id=1%3A2' }
+        ]
+      },
+      {
+        id: 'request-form-redesign',
+        name: 'Submit a Request Form Redesign',
+        organization: 'Stanford University / ROAR Help Center',
+        date: '2026',
+        description: 'A redesigned Zendesk support request flow for educators and administrators reporting ROAR technical issues. I moved a long, dense form into a clearer frontend experience with recognizable sections, stronger field guidance, helpful placeholders, and a more compact layout that reduces scrolling while keeping the live support workflow intact.',
+        image: 'img/request-form-redesign.png',
+        beforeImage: 'img/request-form-before.svg',
+        showComparison: true,
+        impact: [
+          'Helpful placeholders show users what a strong answer looks like before they start typing',
+          'Identifiable sections make request type, user information, environment details, and issue description easier to scan',
+          'A compact two-column desktop layout reduces scrolling while still collapsing into a readable mobile flow',
+          'Side guidance surfaces privacy and submission tips without interrupting the form'
+        ],
+        keyWork: [
+          'Proposed the improved request flow and translated the concept into a working frontend prototype',
+          'Grouped fields into identifiable sections so users understand what information is needed and why',
+          'Added placeholders, helper copy, and contextual side guidance to reduce uncertainty while filling out the form',
+          'Made the form more compact with responsive two-column sections, reducing unnecessary scrolling on desktop',
+          'Implemented the redesign for the live Zendesk request page while preserving required support fields and submission behavior'
+        ],
+        tech: ['JavaScript', 'HTML5', 'CSS3', 'Zendesk', 'Responsive UI', 'UX Design'],
+        links: [
+          { text: 'Design Prototype', url: 'https://zendesk-roar-tehcnical-request.vercel.app/' },
+          { text: 'Live Request Form', url: 'https://roareducation.zendesk.com/hc/en-us/requests/new' }
         ]
       }
     ]
@@ -98,6 +126,12 @@ function renderProfessionalProjects() {
         <img src="${project.image}" alt="${project.name}">
       </div>
     `;
+    const impactSection = project.impact ? `
+      <p class="project-subheader"><strong>Why the redesign works:</strong></p>
+      <ul class="project-list">
+        ${project.impact.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    ` : '';
 
     const projectHTML = `
       <div class="project-card">
@@ -106,6 +140,7 @@ function renderProfessionalProjects() {
           <h2 class="project-title">${project.name}</h2>
           <p class="project-meta">${project.organization} | ${project.date}</p>
           <p class="project-description"><strong>${project.description.split('.')[0]}.</strong> ${project.description.substring(project.description.indexOf('.') + 1).trim()}</p>
+          ${impactSection}
           <p class="project-subheader"><strong>Key Work:</strong></p>
           <ul class="project-list">
             ${project.keyWork.map(work => `<li>${work}</li>`).join('')}
@@ -127,7 +162,7 @@ function renderUIUXProjects() {
   if (!container) return;
 
   const cardsHTML = projectsData.uiux.projects.map(project => `
-    <div class="project-card project-card-clickable" onclick="parent.location='${project.link}'" style="cursor: pointer;">
+    <div class="project-card project-card-clickable" onclick="parent.location='${project.link}'">
       <div class="project-card-image">
         <img src="${project.image}" alt="${project.name}">
         <div class="project-card-overlay"></div>
