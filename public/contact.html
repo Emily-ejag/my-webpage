@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J6DH9L0PWM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-J6DH9L0PWM');
     </script>
     <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    /> -->
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    <meta name="description" content="Contact Emily Arteaga-Garcia for frontend engineering, UX engineering, product implementation, and education technology collaborations.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/contact.css">
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Contact</title>
+    <title>Contact | Emily Arteaga-Garcia</title>
     <script src="js/layout.js"></script>
   </head>
   <body class="my-body">
-    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
     <div class="main-header"></div>
-    <section class="contact-details" id="responseMessage">
-        <div class="contact-intro">
-            <h1 style="color: var(--primary); font-size: 2rem; margin-bottom: 1rem;">Let's Work Together</h1>
-            <p style="color: var(--text-light); font-size: 1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 2rem;">
-                I'm open to conversations about frontend engineering, UX engineering, educational technology, research software, and tools that support multilingual and diverse communities.
-            </p>
-        </div>
+    <main class="contact-page">
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <p class="section-kicker">Contact</p>
+        <h1 id="contact-title">Let's talk about thoughtful frontend work.</h1>
+        <p>I am always happy to connect about frontend engineering, UX engineering, product implementation, education technology, and teams that care about clear, useful interfaces.</p>
+      </section>
+
+      <section class="contact-layout" aria-label="Contact form and collaboration details">
         <div class="contact-form">
-            <form id="contactForm" action="https://formspree.io/f/xoqorovq" method="POST" data-formspree-recaptcha="true">
-                <label for="c_name">
-                    Name:
-                    <input type="text" name="c_name" id="c_name" placeholder="Name">
-                </label>
-                <label for="c_email">
-                    Email:
-                    <input type="email" name="c_email" id="c_email" placeholder="Email">
-                </label>
-                <label for="c_message">
-                    Message:
-                    <textarea name="c_message" id="c_message" cols="30" rows="5"></textarea>
-                </label>
-                <button type="submit"> Send Message</button>
-            </form>
+          <form id="contactForm" action="https://formspree.io/f/xoqorovq" method="POST">
+            <label for="c_name">
+              Name
+              <input type="text" name="name" id="c_name" placeholder="Your name" autocomplete="name" required>
+            </label>
+            <label for="c_email">
+              Email
+              <input type="email" name="email" id="c_email" placeholder="you@example.com" autocomplete="email" required>
+            </label>
+            <label for="c_message">
+              Message
+              <textarea name="message" id="c_message" rows="6" placeholder="Tell me what you are building, hiring for, or curious about." required></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
-        <div class="music">
-          <!-- <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1F0sijgNaJdgit?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5qabbKoVOkrb9T9e7j9xcq?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-    </section>
+
+        <aside class="contact-sidebar" aria-label="Ways to connect">
+          <p class="section-kicker">Good Fit</p>
+          <h2>Where I can help fastest</h2>
+          <ul>
+            <li>Frontend engineering roles with product ownership</li>
+            <li>UX engineering, prototypes, and production UI delivery</li>
+            <li>Research, assessment, or education technology products</li>
+            <li>Teams improving dense workflows into clear user experiences</li>
+          </ul>
+
+          <div class="contact-tags" aria-label="Core strengths">
+            <span>Frontend</span>
+            <span>Vue.js</span>
+            <span>TypeScript</span>
+            <span>UX Design</span>
+            <span>Accessible UI</span>
+            <span>Product Delivery</span>
+          </div>
+
+          <div class="contact-social" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/emilyarteagag/" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              LinkedIn
+            </a>
+            <a href="https://github.com/Emily-ejag" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              GitHub
+            </a>
+          </div>
+        </aside>
+      </section>
+    </main>
     <div class="main-footer"></div>
   </body>
 </html>

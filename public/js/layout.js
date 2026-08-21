@@ -18,14 +18,16 @@ const layoutComponents = {
     social: [
       {
         icon: 'fa-linkedin',
-        url: 'https://www.linkedin.com/in/emilyarteagag/'
+        url: 'https://www.linkedin.com/in/emilyarteagag/',
+        label: 'LinkedIn'
       },
       {
         icon: 'fa-github',
-        url: 'https://github.com/Emily-ejag'
+        url: 'https://github.com/Emily-ejag',
+        label: 'GitHub'
       }
     ],
-    copyright: '© 2026 Emily Arteaga Garcia • Built with ❤️ and Code'
+    copyright: '(c) 2026 Emily Arteaga Garcia | Built with care and code'
   }
 };
 
@@ -34,12 +36,17 @@ function renderHeader() {
   const headerElement = document.querySelector('.main-header');
   if (!headerElement) return;
 
+  let currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  if (!currentPage.includes('.')) currentPage = 'index.html';
   const navHTML = layoutComponents.nav.links
-    .map(link => `<li><a href="${link.url}">${link.text}</a></li>`)
+    .map(link => {
+      const active = link.url === currentPage ? ' aria-current="page"' : '';
+      return `<li><a href="${link.url}"${active}>${link.text}</a></li>`;
+    })
     .join('');
 
   headerElement.innerHTML = `
-    <p class="header-name" onclick="parent.location='index.html'"><strong>Emily</strong> Arteaga-Garcia</p>
+    <a class="header-name" href="index.html"><strong>Emily</strong> Arteaga-Garcia</a>
     <section class="main-menu">
       <ul>${navHTML}</ul>
     </section>
@@ -52,12 +59,12 @@ function renderFooter() {
   if (!footerElement) return;
 
   const socialHTML = layoutComponents.footer.social
-    .map(item => `<a href="${item.url}" target="_blank"><i class="fa ${item.icon} fa-3x" aria-hidden="true"></i></a>`)
+    .map(item => `<a href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${item.label}"><i class="fa ${item.icon}" aria-hidden="true"></i></a>`)
     .join('');
 
   footerElement.innerHTML = `
     <p class="connect">${layoutComponents.footer.connectText}</p>
-    ${socialHTML}
+    <div class="footer-social">${socialHTML}</div>
     <p class="rights">${layoutComponents.footer.copyright}</p>
   `;
 }

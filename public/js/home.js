@@ -1,59 +1,130 @@
 // Home page featured projects - uses projects.js data
+function renderProfessionalCase(project, index) {
+  const isComparison = project.showComparison && project.beforeImage;
+  const visualHTML = isComparison ? `
+    <div class="case-visual" aria-label="${project.name} before and after visual comparison">
+      <figure>
+        <img src="${project.beforeImage}" alt="Before: ${project.name}">
+        <figcaption>Before</figcaption>
+      </figure>
+      <figure>
+        <img src="${project.image}" alt="After: ${project.name}">
+        <figcaption>After</figcaption>
+      </figure>
+    </div>
+  ` : `
+    <div class="case-visual case-visual-single" aria-label="${project.name} project preview">
+      <figure>
+        <img src="${project.image}" alt="${project.name} interface preview">
+        <figcaption>Redesign preview</figcaption>
+      </figure>
+    </div>
+  `;
+  const impactHTML = project.impact ? `
+    <div class="case-list-wrap">
+      <h4>Why the redesign works</h4>
+      <ul class="case-list">
+        ${project.impact.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+  ` : '';
+
+  return `
+    <article class="featured-case ${index > 0 ? 'featured-case-secondary' : ''} reveal">
+      ${visualHTML}
+      <div class="case-content">
+        <p class="case-label">Professional frontend work</p>
+        <h3>${project.name}</h3>
+        <p class="case-meta">${project.organization} | ${project.date}</p>
+        <p>${project.description}</p>
+        ${impactHTML}
+        <div class="case-list-wrap">
+          <h4>Key work</h4>
+          <ul class="case-list">
+            ${project.keyWork.map(work => `<li>${work}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="tech-stack" aria-label="${project.name} technology stack">
+          ${project.tech.map(item => `<span>${item}</span>`).join('')}
+        </div>
+        <div class="case-actions">
+          ${project.links.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-link">${link.text}</a>`).join('')}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
 function renderFeaturedProjects() {
   const roarContainer = document.getElementById('roar-featured');
   const academicContainer = document.getElementById('academic-projects');
 
   if (!roarContainer || !academicContainer) return;
 
-  // Render ROAR
-  const roar = projectsData.professional.projects[0];
-  roarContainer.innerHTML = `
-    <div style="margin-bottom: 3rem;">
-      <div class="project-card" style="border: 2px solid var(--primary); box-shadow: 0 8px 25px rgba(26, 122, 122, 0.3);">
-        <div class="project-card-header" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); padding: 2.5rem;">
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-            <span style="font-size: 0.85rem; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; color: white; font-weight: 600;">PROFESSIONAL</span>
-          </div>
-          <h3 style="margin: 0.5rem 0;">${roar.name}</h3>
-          <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">${roar.organization}</p>
-        </div>
-        <div class="project-card-body">
-          <p><strong>${roar.organization} | ${roar.date} | 3+ years total</strong></p>
-          <p style="margin-top: 1rem;">${roar.description.split('.')[0]}. ${roar.description.substring(roar.description.indexOf('.') + 1).trim()}</p>
-          <p><strong>Key Achievements:</strong></p>
-          <ul style="margin: 0.5rem 0; padding-left: 1.5rem; color: var(--text-light);">
-            ${roar.keyWork.map(work => `<li>${work}</li>`).join('')}
-          </ul>
-          <p style="margin-top: 1rem;"><strong>Tech Stack:</strong> ${roar.tech.join(', ')}</p>
-          <div class="project-card-footer" style="gap: 0.5rem;">
-            ${roar.links.map(link => `<a href="${link.url}" target="_blank" class="project-link">${link.text}</a>`).join('')}
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
+  roarContainer.innerHTML = projectsData.professional.projects
+    .map((project, index) => renderProfessionalCase(project, index))
+    .join('');
 
-  // Render academic projects
-  const academicProjects = projectsData.uiux.projects.slice(0, 4);
-  const cardsHTML = academicProjects.map(project => `
-    <div class="project-card">
-      <div class="project-card-header">
+  const selectedProjects = [
+    ...projectsData.uiux.projects,
+    ...projectsData.frontend.projects
+  ];
+
+  academicContainer.innerHTML = selectedProjects.map(project => `
+    <article class="work-card reveal">
+      <a class="work-image" href="${project.link}" aria-label="View ${project.name}">
+        <img src="${project.image}" alt="${project.name} preview">
+      </a>
+      <div class="work-card-content">
+        <p class="work-type">${project.subtitle || (project.details ? 'Frontend build' : 'UX case study')}</p>
         <h3>${project.name}</h3>
-        <p style="color: rgba(255,255,255,0.9); margin: 0;">
-          ${project.subtitle ? project.subtitle : 'Design Project'}
-        </p>
-      </div>
-      <div class="project-card-body">
         <p>${project.description}</p>
-        <div class="project-card-footer">
-          <a href="${project.link}" class="project-link">View Project</a>
-        </div>
+        <a href="${project.link}" class="text-link">View project</a>
       </div>
-    </div>
+    </article>
   `).join('');
-
-  academicContainer.innerHTML = cardsHTML;
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', renderFeaturedProjects);
+function initRevealAnimations() {
+  const revealItems = document.querySelectorAll('.reveal');
+
+  if (!('IntersectionObserver' in window)) {
+    revealItems.forEach(item => item.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealItems.forEach(item => observer.observe(item));
+}
+
+function initHeroMotion() {
+  const hero = document.querySelector('.hero-section');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  hero.addEventListener('pointermove', event => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+
+    hero.style.setProperty('--hero-x', x.toFixed(3));
+    hero.style.setProperty('--hero-y', y.toFixed(3));
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.documentElement.classList.add('js-enabled');
+  renderFeaturedProjects();
+  initRevealAnimations();
+  initHeroMotion();
+});
