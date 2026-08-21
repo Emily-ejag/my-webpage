@@ -5,24 +5,48 @@ const projectsData = {
     projects: [
       {
         id: 'roar',
-        name: 'ROAR - Rapid Online Assessment of Reading',
+        name: 'ROAR Login Experience Redesign',
         organization: 'Stanford University',
         date: 'November 2023 - Present',
-        description: 'A scalable web-based literacy assessment platform used by schools, districts, and researchers across the Stanford Reading & Dyslexia Research Program. As a frontend and assessment engineering lead, I shape user-facing product decisions, mock interaction flows, implement frontend systems, and deliver polished tools used by educators, students, and researchers.',
+
+        description:
+          'ROAR is a web-based literacy assessment platform used by schools, districts, and researchers. I redesigned the authentication experience to make signing in simpler for users across organizations with different authentication configurations.',
+
         image: 'img/roarLogin.png',
         beforeImage: 'img/beforeRoarLogo.png',
         showComparison: true,
-        keyWork: [
-          'Lead frontend development for school-facing assessment, reporting, support, and dashboard experiences',
-          'Redesigned login flow with SSO auto-detection and fallback buttons—reducing authentication friction',
-          'Implemented normed scores and adaptive testing standardization (CAT/jsCAT) across assessment suite',
-          'Built Assessment SDK and event endpoints for extensible research infrastructure',
-          'Mentor team members on frontend quality, accessibility, and maintainable software practices'
+
+        impact: [
+          'Introduced an email-first login flow that identifies the appropriate authentication method automatically',
+          'Reduced the need for users to understand whether their organization uses SSO, username/password, or another sign-in method',
+          'Added clear fallback options when automatic authentication is unavailable'
         ],
-        tech: ['Vue.js', 'TypeScript', 'Firebase', 'Python', 'SQL', 'HTML5', 'CSS3'],
+
+        keyWork: [
+          'Mapped the existing authentication flow and identified points of confusion in the user journey',
+          'Designed and prototyped the new login interaction before implementation',
+          'Implemented SSO auto-detection and fallback authentication paths',
+          'Built the redesigned experience in Vue.js and TypeScript while integrating with the existing Firebase authentication system',
+          "Improved visual hierarchy, instructions, and action states to make the login experience easier to understand",
+          "Refactored the login experience into a more maintainable frontend structure using containers, components, and composables",
+          "Separated authentication logic from presentation to make the flow easier to extend, test, and maintain"
+        ],
+
+        tech: [
+          'Vue.js',
+          'TypeScript',
+          'Firebase',
+          'HTML5',
+          'CSS3',
+          'UX Design'
+        ],
+
         links: [
           { text: 'Visit Live', url: 'https://roar.education' },
-          { text: 'Design Prototype', url: 'https://www.figma.com/proto/XXFfiMqdrdfaUDaWxyOrLS/ROAR?node-id=1-2&starting-point-node-id=1%3A2' }
+          {
+            text: 'Design Prototype',
+            url: 'https://www.figma.com/proto/XXFfiMqdrdfaUDaWxyOrLS/ROAR?node-id=1-2&starting-point-node-id=1%3A2'
+          }
         ]
       },
       {
